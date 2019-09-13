@@ -40,4 +40,11 @@ public class SqMaxTest {
         int res = check.max(4, 4, 4, 4);
         assertThat(res, is(4));
     }
+
+    @Test
+    public void testMax() {
+        SqMax check = new SqMax();
+        int res = check.max(4, 3, 8, 1);
+        assertThat(res, is(8));
+    }
 }
