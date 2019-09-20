@@ -1,5 +1,11 @@
 package ru.job4j.calculator;
 
+/**
+ *Class Calculator решение задачи части 001 урок1.
+ * @author Vasiliy Kozlov
+ * @sience 01.09.2019
+ */
+
 public class Calculator {
     public static void add(double first, double second) {
         double result = first + second;
@@ -20,6 +26,11 @@ public class Calculator {
         double result = first * second;
         System.out.println(first + " * " + second + " = " + result);
     }
+
+    /**
+     * Метод для тестирования.
+     * @param args
+     */
 
     public static void main(String[] args) {
         add(1, 1);
