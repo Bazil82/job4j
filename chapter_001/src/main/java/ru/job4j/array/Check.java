@@ -7,6 +7,7 @@ public class Check {
             boolean temp = data[i+1];
             if (data[i] != temp) {
                 res = false;
+                break;
             }
         }
         return res;
