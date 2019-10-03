@@ -49,4 +49,20 @@ public class FindLoopTest {
         int expect = 3;
         assertThat(result, is(expect));
     }
+
+    @Test
+    public void whenSortFiveNumbers() {
+        int[] input = new int[] {3, 4, 1, 2, 5};
+        int result[] = FindLoop.sort(input);
+        int[] expect = new int[] {1, 2, 3, 4, 5};
+        assertThat(result, is(expect));
+    }
+
+    @Test
+    public void whenSortThreeNumbers() {
+        int[] input = new int[] {3, 5, 1};
+        int result[] = FindLoop.sort(input);
+        int[] expect = new int[] {1, 3, 5};
+        assertThat(result, is(expect));
+    }
 }
