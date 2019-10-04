@@ -60,13 +60,26 @@ public class MatrixCheckTest {
     }
 
     @Test
-    public void whenError() {
+    public void whenDataHorizontalError() {
         char[][] input = {
                 {' ', ' ', ' ', ' ', ' '},
                 {' ', ' ', 'X', 'X', ' '},
                 {'X', 'X', ' ', 'X', 'X'},
                 {' ', ' ', ' ', ' ', ' '},
                 {' ', ' ', ' ', ' ', ' '},
+        };
+        boolean result = MatrixCheck.isWin(input);
+        assertThat(result, is(false));
+    }
+
+    @Test
+    public void whenDataVerticalError() {
+        char[][] input = {
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', 'X', ' '},
+                {'X', 'X', ' ', 'X', 'X'},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
         };
         boolean result = MatrixCheck.isWin(input);
         assertThat(result, is(false));
