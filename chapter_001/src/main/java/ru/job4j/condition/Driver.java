@@ -8,7 +8,7 @@ public class Driver {
     }
 
     public boolean hasLicense() {
-        return this.licence =='A' || this.licence == 'B' || this.licence == 'C';
+        return this.licence == 'A' || this.licence == 'B' || this.licence == 'C';
     }
 
     public boolean canDrive(char category) {
