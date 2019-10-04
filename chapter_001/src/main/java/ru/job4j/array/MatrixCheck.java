@@ -11,7 +11,7 @@ public class MatrixCheck {
                     if (board[i][j] == 'X') row++;
                     if (board[j][i] == 'X') cell++;
                 }
-                if (row == 5 || cell == 5) {
+                if (row == board.length || cell == board.length) {
                     res = true;
                     break;
                 }
