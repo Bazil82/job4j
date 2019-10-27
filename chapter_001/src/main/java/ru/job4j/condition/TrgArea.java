@@ -8,7 +8,7 @@ public class TrgArea {
     }
 
     public static void main(String[] args) {
-        double res = TrgArea.area(2, 2, 2);
+        double res = TrgArea.area(20, 20, 20);
         System.out.println("area (2, 2, 2) = " + res);
     }
 
