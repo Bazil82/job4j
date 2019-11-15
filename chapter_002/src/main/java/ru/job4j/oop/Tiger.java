@@ -5,4 +5,9 @@ public class Tiger extends Predator{
         super();
         System.out.println("class Tiger");
     }
+
+    public Tiger(String name) {
+        this.name = name;
+        System.out.println("Tiger name: " + this.name);
+    }
 }
