@@ -85,4 +85,17 @@ public class MatrixCheckTest {
         assertThat(result, is(false));
     }
 
+    @Test
+    public void whenDataGameError() {
+        char[][] input = {
+                {' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' '},
+                {'X', 'X', 'Х', 'X', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' '},
+        };
+        boolean result = MatrixCheck.isWin(input);
+        assertThat(result, is(false));
+    }
+
 }

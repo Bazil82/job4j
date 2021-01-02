@@ -19,6 +19,8 @@ public class MatrixCheck {
                     res = true;
                     break;
                 }
+                row = 0;
+                cell = 0;
             }
         }
         return res;
