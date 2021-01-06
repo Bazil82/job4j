@@ -41,4 +41,43 @@ public class Tracker {
         }
         return Arrays.copyOf(itemsFindByName, size);
     }
+
+    public boolean replace(int id, Item item) {
+        boolean res = false;
+        for (int i = 0; i < this.size; i++) {
+            if (items[i].getId() == id) {
+                items[i].setName(item.getName());
+                res =  true;
+            }
+        }
+        return res;
+    }
+
+    public boolean delete(int id) {
+        boolean res = false;
+        for (int i = 0; i < this.size; i++) {
+            if (items[i].getId() == id) {
+                items[i] = null;
+                res = true;
+                defrag(items);
+                ids--;
+                size--;
+            }
+        }
+        return res;
+    }
+
+    public Item[] defrag(Item[] items) {
+        Item temp;
+        int count = 0;
+        for (int i = 0; i < items.length; i++) {
+            if (items[i] != null) {
+                temp = items[count];
+                items[count] = items[i];
+                items[i] = temp;
+                count++;
+            }
+        }
+        return items;
+    }
 }
